@@ -4,7 +4,7 @@ Having a base domain class to fill default columns
 The base project was to have 2 columns createdBy and lastUpdatedBy filled automatically by the Spring Security plug-in.
 
 To achieved this :
-##1. Add the Spring Security plung-in in build.gradle
+## 1. Add the Spring Security plung-in in build.gradle
 ``` groovy
 buildscript {
     repositories {
@@ -70,7 +70,7 @@ assets {
 }
 ```
 
-## 1. Create an abstract base domain class in src/main/groovy
+## 2. Create an abstract base domain class in src/main/groovy
 ``` groovy
 package org.prt
 
@@ -102,7 +102,7 @@ abstract class BaseDomain {
 
 ```
 
-##2 Create a domain class inheriting the base domain class and inject the service in.
+## 3. Create a domain class inheriting the base domain class and inject the service in.
 ``` groovy
 package org.prt
 
@@ -119,7 +119,7 @@ class MyDomain extends BaseDomain {
 
 }
 ```
-## Init the Spring Security Plugin
+## 4. Init the Spring Security Plugin
 ``` bash
 grails s2-quickstart com.yourapp User Role
 ```
